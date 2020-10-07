@@ -18,5 +18,16 @@
 
 	<div id="animate">ANIMATE</div>
 
+	<script>
+                var a = $("#animate");
+                a.hide();
+                $.fx.speeds["very-slow"] = 3000;
+                a.show("very-slow");
+                
+             	a.delay(5000);
+                
+                a.hide(1000);
+        </script>
+
 </body>
 </html>
