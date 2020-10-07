@@ -1,0 +1,13 @@
+var data = `
+	[
+		{
+			"name":"Serri",
+			"points":60
+
+		},
+		{
+			"name":"Theo",
+			"points":85
+		}
+	]
+`;
