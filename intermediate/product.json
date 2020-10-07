@@ -1,0 +1,24 @@
+var product = `[{
+    "type": "Phone",
+    "name": "Iphone",
+    "price": "999,99€",
+    "color": "Black",
+    "quantity": "150",
+    "image": "img/phone_iphone.png"
+},
+{
+    "type": "Notebook",
+    "name": "Apple",
+    "price": "2.500€",
+    "color": "White",
+    "quantity": "50",
+    "image": "img/notebook_apple.png"
+},
+{
+    "type": "Tablet",
+    "name": "Ipad",
+    "price": "1.500€",
+    "color": "Rose",
+    "quantity": "20",
+    "image": "img/tablet_ipad.png"
+}]`;
