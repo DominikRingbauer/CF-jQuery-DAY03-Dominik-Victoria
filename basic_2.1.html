@@ -40,37 +40,28 @@
         </tr>
     </table>
 
-    <br>
-
-    <input type="button" value="Add a new TO DO" id="newrows">
-
     <script>
         $(document).ready(function() {
-            $('tr').on("dblclick", function() {
-                $(this).animate({
-                    opacity: 0.0,
-                    paddingLeft: '+=100'
-                }, 500, function() {
-                    $(this).remove();
-                });
+            //create a new input
+            $('table').before("<input class='input' type='text'/><button type='submit' value='submit'> Add a new TO DO:</button>");
+            //function for add a new to do
+            $('button').on("click", function() {
+                var newToDo = $('.input').val();
+                console.log(newToDo);
+                $('table').append("<tr><td>" + newToDo + "</td></tr>");
             });
-        });
-
-        $(document).ready(function() {
-            $('#newrows').click(function() {
-                var addcontrols = "<tr>"
-                addcontrols += "<td><input type='text' placeholder='Enter To Do'></td>"
-                addcontrols += "</tr>"
-                $('table').append(addcontrols);
-                $('tr').on("dblclick", function() {
+            //remove function
+            function removeToDo() {
+                $('td').on("click", function() {
                     $(this).animate({
                         opacity: 0.0,
-                        paddingLeft: '+=100'
+                        paddingLeft: '+=80'
                     }, 500, function() {
                         $(this).remove();
                     });
                 });
-            });
+            }
+            removeToDo();
         });
     </script>
 
