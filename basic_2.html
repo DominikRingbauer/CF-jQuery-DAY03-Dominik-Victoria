@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery animation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <style>
+        td {
+            background-color: gray;
+            list-style-type: none;
+            border: 1px solid black;
+            width: 50%;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TO DO:</h1>
+
+    <table>
+        <tr>
+            <td>Shopping</td>
+        </tr>
+        <tr>
+            <td>Cooking</td>
+        </tr>
+        <tr>
+            <td>Running</td>
+        </tr>
+        <tr>
+            <td>Watch a movie</td>
+        </tr>
+        <tr>
+            <td>Go to bed</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <input type="button" value="Add a new TO DO" id="newrows">
+
+    <!--<ul>
+        <li>Shopping</li>
+        <li>Cooking</li>
+        <li>Running</li>
+        <li>Watch a movie</li>
+        <li>Go to bed</li>
+    </ul>-->
+
+
+    <script>
+        $(document).ready(function() {
+            $('tr').on("dblclick", function() {
+                $(this).animate({
+                    opacity: 0.0,
+                    paddingLeft: '+=100'
+                }, 500, function() {
+                    $(this).remove();
+                });
+            });
+        });
+
+        $(document).ready(function() {
+            $('#newrows').click(function() {
+                var addcontrols = "<tr>"
+                addcontrols += "<td><input type='text' placeholder='Enter To Do'></td>"
+                addcontrols += "</tr>"
+                $('table').append(addcontrols);
+                $('tr').on("dblclick", function() {
+                    $(this).animate({
+                        opacity: 0.0,
+                        paddingLeft: '+=100'
+                    }, 500, function() {
+                        $(this).remove();
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
