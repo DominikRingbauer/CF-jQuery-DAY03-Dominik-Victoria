@@ -49,6 +49,7 @@
                 var newToDo = $('.input').val();
                 console.log(newToDo);
                 $('table').append("<tr><td>" + newToDo + "</td></tr>");
+                removeToDo();
             });
             //remove function
             function removeToDo() {
@@ -61,7 +62,6 @@
                     });
                 });
             }
-            removeToDo();
         });
     </script>
 
